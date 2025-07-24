@@ -2,6 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+  pages: {
+    pattern: ['**\/*.vue', '!**\/components\/*.vue'],
+  },
 
   modules: [
     '@nuxt/eslint',
@@ -9,7 +18,6 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/ui',
   ],
-
   eslint: {
     config: {
       standalone: false,
