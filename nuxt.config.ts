@@ -11,12 +11,14 @@ export default defineNuxtConfig({
   pages: {
     pattern: ['**\/*.vue', '!**\/components\/*.vue'],
   },
+  css: ['~/assets/css/main.css'],
 
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/ui',
+    '@vueuse/nuxt',
   ],
   eslint: {
     config: {
